@@ -31,9 +31,9 @@
             <div id="map"></div>
         </div>
         <div class="container">
-            <input id="tableFilter" type="text" placeholder="filter by.."></input>
+            <input id="tableFilter" type="text" placeholder="filtra... "></input>
             <span class="clear button">Clear</span> <span class="resetMap button">Reset Map</span>
-            <span class="noMatches">no matches</span>
+            <span class="noMatches">nessun risultato</span>
             <div id="hackSpotsTable"></div>
         </div>
         <div id="info" class="container">
@@ -49,22 +49,22 @@
 
     <script id="hackSpotsTable" type="text/html">
         <table>
-            <tr><th class="tHeader">Name</th><th class="tHeader">Address</th><th class="tHeader">City</th><th class="tHeader">State</th><th class="tHeader">Country</th><th class="">Elsewhere</th></tr>
+            <tr><th class="tHeader">Name</th><th class="tHeader">Indirizzo</th><th class="tHeader">Città</th><th class="">Evento</th></tr>
             {{#rows}}
-                <tr id="{{rowNumber}}" class="spotRow"><td>{{name}}</td><td>{{address}}</td><td>{{city}}</td><td>{{state}}</td><td>{{country}}</td><td><a class="button" href="https://maps.google.com/maps?q={{address}},{{city}},{{state}}" target="_blank">G Map</a> <a class="button" href="http://www.yelp.com/search?find_desc={{name}}&find_loc={{city}},{{state}}" target="_blank">Yelp</a></td></tr>
+                <tr id="{{rowNumber}}" class="spotRow"><td>{{name}}</td><td>{{address}}</td><td>{{city}}</td><td></td></tr>
             {{/rows}}
         </table>
     </script>
 
     <script id="latestSpot" type="text/html">
         {{#rows}}
-            <h4 class="fauxButton">MOST RECENT SPOT</h4>
+            <h4 class="fauxButton">OFF selezionato</h4>
             <h2>{{name}}</h2>
             <p class="colorText">{{address}}<p>
             <p class="colorText">{{city}}{{#state}}, {{state}}{{/state}}{{#postcode}}, {{postcode}}{{/postcode}}</p>
             <ul>
-                <li><span class="category">Tipo 1</span> {{tipo}}</li>
-                <li><span class="category">Tipo 2:</span> {{tipo2}}</li>
+                <li><span class="category"></span> {{tipo}}</li>
+                <li><span class="category"></span> {{tipo2}}</li>
                 <li><span class="category">Contributore:</span>{{contributore}}</li>
             </ul>
             <ul>
@@ -79,7 +79,7 @@
 
     <script id="selectedSpot" type="text/html">
         {{#rows}}
-            <h4 class="fauxButton">SELECTED SPOT</h4>
+            <h4 class="fauxButton">OFF selezionato</h4>
             <h2>{{name}}</h2>
             <p class="colorText">{{address}}<p>
             <p class="colorText">{{city}}{{#state}}, {{state}}{{/state}}{{#postcode}}, {{postcode}}{{/postcode}}</p>
