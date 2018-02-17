@@ -51,7 +51,7 @@
         <table>
             <tr><th class="tHeader">Luogo OFF</th><th class="tHeader">Indirizzo</th><th class="tHeader">Città</th><th class="">Evento</th><th class="">Data e ora</th><th class="">Organizzatore</th></tr>
             {{#rows}}
-                <tr id="{{rowNumber}}" class="spotRow"><td>{{name}}</td><td>{{address}}</td><td>{{city}}</td><td></td></tr>
+                <tr id="{{rowNumber}}" class="spotRow"><td>{{name}}</td><td>{{address}}</td><td>{{city}}</td><td>{{evento}}</td><td>{{data}}</td><td>{{organizzatore}}</td></tr>
             {{/rows}}
         </table>
     </script>
@@ -63,11 +63,11 @@
             <p class="colorText">{{address}}<p>
             <p class="colorText">{{city}}{{#state}}, {{state}}{{/state}}{{#postcode}}, {{postcode}}{{/postcode}}</p>
             <ul>
-                <li><span class="category"></span> {{tipo}}</li>
-                <li><span class="category"></span> {{tipo2}}</li>
-                <li><span class="category"></span> {{evento}}</li>
-                <li><span class="category"></span> {{data}}</li>
-                <li><span class="category"></span> {{organizzatore}}</li>
+                <li><span class="category"></span> {{Tipo}}</li>
+                <li><span class="category"></span> {{Tipo2}}</li>
+                <li><span class="category"></span> {{Evento}}</li>
+                <li><span class="category"></span> {{Data}}</li>
+                <li><span class="category"></span> {{Organizzatore}}</li>
                 
              <!--    <li><span class="category">Contributore:</span>{{contributore}}</li> -->
             </ul>
@@ -90,9 +90,9 @@
             <ul>
                 <li><span class="category"></span> {{Tipo}}</li>
                 <li><span class="category"></span> {{Tipo2}}</li>
-                <li><span class="category"></span> {{evento}}</li>
-                <li><span class="category"></span> {{data}}</li>
-                <li><span class="category"></span> {{organizzatore}}</li>
+                <li><span class="category"></span> {{Evento}}</li>
+                <li><span class="category"></span> {{Data}}</li>
+                <li><span class="category"></span> {{Organizzatore}}</li>
                 <!-- <li><span class="category">Contributore:</span>{{contributore}}</li> -->
             </ul>
             <ul>
